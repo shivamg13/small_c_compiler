@@ -1,0 +1,14 @@
+
+void main()
+{
+	pushi(ebp);
+	move(esp,ebp);
+	move(1.000000,eax);
+	move(2.000000,ebx);
+	storei(ebx,ind(ebp,-8));
+	addi(eax,ebx);
+print_int(ebx);
+	loadi(ind(ebp), ebp);
+	popi(1);
+	return;
+}

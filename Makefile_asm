@@ -1,0 +1,15 @@
+all: a.out
+
+a.out: machine.cc code.asm
+	g++   -m32 -g3 -O0 machine.cc
+
+
+.PHONY: clean
+	
+clean:
+	rm a.out
+	rm -f Scanner*
+	rm -f Parser*
+	rm -f *.o
+	rm -f a.out
+	rm -f out*
